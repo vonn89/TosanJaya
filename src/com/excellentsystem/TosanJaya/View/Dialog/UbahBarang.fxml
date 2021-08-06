@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: transparent;" stylesheets="@../../Resource/MyTheme.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.excellentsystem.TosanJaya.View.Dialog.UbahBarangController">
+   <children>
+      <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane onMouseClicked="#close" opacity="0.69" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" />
+            <AnchorPane maxHeight="450.0" styleClass="dialog">
+               <children>
+                  <GridPane fx:id="gridPane" hgap="10.0" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="70.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                     <children>
+                        <Label fx:id="namaBarangLabel" prefHeight="50.0" style="-fx-font-size: 36; -fx-text-fill: seccolor3;" styleClass="label-header" text="Nama Barang" wrapText="true" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="3">
+                           <children>
+                              <Label prefWidth="80.0" style="-fx-font-size: 18; -fx-text-fill: seccolor3; -fx-font-family: Georgia;" text="Qty" />
+                              <TextField fx:id="qtyField" alignment="CENTER" maxWidth="250.0" prefHeight="50.0" style="-fx-font-size: 20;" text="0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="4">
+                           <children>
+                              <Label prefWidth="80.0" style="-fx-font-size: 18; -fx-text-fill: seccolor3; -fx-font-family: Georgia;" text="Harga" />
+                              <TextField fx:id="hargaField" alignment="CENTER" disable="true" maxWidth="250.0" prefHeight="50.0" style="-fx-font-size: 20;" text="0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="5">
+                           <children>
+                              <Label prefWidth="80.0" style="-fx-font-size: 18; -fx-text-fill: seccolor3; -fx-font-family: Georgia;" text="Total" />
+                              <TextField fx:id="totalField" alignment="CENTER" disable="true" maxWidth="250.0" prefHeight="50.0" style="-fx-font-size: 20;" text="0" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="hintLabel" style="-fx-font-weight: bold; -fx-border-color: seccolor3; -fx-font-size: 12; -fx-text-fill: seccolor3;" text="Hint Label" textFill="RED" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <Label alignment="CENTER" style="-fx-font-size: 14; -fx-font-weight: bold;" text="( tekan ENTER untuk menyimpan barang )" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Label alignment="CENTER" style="-fx-font-size: 14; -fx-font-weight: bold;" text="( tekan ESC untuk menutup barang )" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+               </children>
+               <StackPane.margin>
+                  <Insets bottom="80.0" top="80.0" />
+               </StackPane.margin>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
